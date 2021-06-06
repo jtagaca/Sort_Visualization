@@ -36,7 +36,7 @@ export default function SortingVisualizer() {
   function randomizeArray() {
     for (var i = 0; i < primaryArray.length; i++) {
       var bar = document.getElementById(i).style;
-      bar.backgroundColor = "#0d98ba";
+      bar.backgroundColor = "#ADD8E6";
     }
     var array = [];
     for (var i = 0; i < ARRAYSIZE; i++) {
@@ -97,8 +97,8 @@ export default function SortingVisualizer() {
           await sleep(animationSpeed);
 
           //Changes the Style back to original
-          bar1.backgroundColor = "#FF7F50";
-          bar2.backgroundColor = "#FF7F50";
+          bar1.backgroundColor = "#ADD8E6";
+          bar2.backgroundColor = "#ADD8E6";
 
           sorted = false;
           playBeep1();
@@ -136,8 +136,8 @@ export default function SortingVisualizer() {
 
         playBeep1();
         //Changes the Style back to original
-        bar1.backgroundColor = "#FF7F50";
-        bar2.backgroundColor = "#FF7F50";
+        bar1.backgroundColor = "#ADD8E6";
+        bar2.backgroundColor = "#ADD8E6";
       } else {
         await sleep(animationSpeed);
       }
@@ -163,8 +163,8 @@ export default function SortingVisualizer() {
         bar2.backgroundColor = "#6A5ACD";
 
         //Changes the Style back to original
-        bar1.backgroundColor = "#FFFF00";
-        bar2.backgroundColor = "#FF7F50";
+        bar1.backgroundColor = "#ADD8E6";
+        bar2.backgroundColor = "##ADD8E6";
       } else {
         await sleep(animationSpeed);
       }
@@ -258,8 +258,8 @@ export default function SortingVisualizer() {
         bar2.backgroundColor = "#6A5ACD";
 
         setTimeout(() => {
-          bar1.backgroundColor = "#ff7f50";
-          bar2.backgroundColor = "#ff7f50";
+          bar1.backgroundColor = "##ADD8E6";
+          bar2.backgroundColor = "##ADD8E6";
         }, 800);
       } else {
         //Compare values and overwrite primary array with new sorted array
@@ -270,8 +270,8 @@ export default function SortingVisualizer() {
         bar1.backgroundColor = "#DC143C";
         bar2.backgroundColor = "#6A5ACD";
         setTimeout(() => {
-          bar1.backgroundColor = "#ff7f50";
-          bar2.backgroundColor = "#ff7f50";
+          bar1.backgroundColor = "##ADD8E6";
+          bar2.backgroundColor = "##ADD8E6";
         }, 200);
       }
     }
@@ -340,8 +340,8 @@ export default function SortingVisualizer() {
         bar2.backgroundColor = "#6A5ACD";
 
         setTimeout(() => {
-          bar1.backgroundColor = "#ff7f50";
-          bar2.backgroundColor = "#ff7f50";
+          bar1.backgroundColor = "##ADD8E6";
+          bar2.backgroundColor = "##ADD8E6";
         }, 200);
 
         setPrimaryArray([...primaryArray, arr]);
@@ -439,7 +439,7 @@ export default function SortingVisualizer() {
             Merge Sort
           </button>
           <button onClick={quickSort}>Quick Sort</button>
-          <button onClick={radixCaller}>Radix Sort</button>
+          {/* <button onClick={radixCaller}>Radix Sort</button> */}
         </div>
       </div>
 
