@@ -490,30 +490,35 @@ export default function SortingVisualizer() {
           <span id="soundLabel">Sound {soundOn ? "On" : "Off"}</span>
         </div>
       </div>
-      <div className="arrayContainer">
-        {primaryArray &&
-          primaryArray.map((val, key) => {
-            return (
-              <div
-                className="bar"
-                id={key}
-                key={key}
-                style={{ height: val }}
-              ></div>
-            );
-          })}
-      </div>
 
-      {algorithm.name != undefined && (
-        <div className="algorithmInfo">
-          <>
-            <div id="name">Algorithm: {algorithm.name}</div>
-            <div id="timeComplexity">
-              Time Complexity: {algorithm.timeComplexity}{" "}
+      <div className="container">
+        <div className="row arrayContainer middle2">
+          <div className="col-md-12 mb-5">
+            {primaryArray &&
+              primaryArray.map((val, key) => {
+                return (
+                  <div
+                    className="bar"
+                    id={key}
+                    key={key}
+                    style={{ height: val }}
+                  ></div>
+                );
+              })}
+          </div>
+
+          {algorithm.name != undefined && (
+            <div className="mt-5 algorithmInfo col-md-12">
+              <>
+                <div id="name">Algorithm: {algorithm.name}</div>
+                <div id="timeComplexity">
+                  Time Complexity: {algorithm.timeComplexity}{" "}
+                </div>
+              </>
             </div>
-          </>
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 }
