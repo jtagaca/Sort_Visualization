@@ -36,7 +36,7 @@ export default function SortingVisualizer() {
   function randomizeArray() {
     for (var i = 0; i < primaryArray.length; i++) {
       var bar = document.getElementById(i).style;
-      bar.backgroundColor = "#ff7f50";
+      bar.backgroundColor = "#0d98ba";
     }
     var array = [];
     for (var i = 0; i < ARRAYSIZE; i++) {
@@ -163,7 +163,7 @@ export default function SortingVisualizer() {
         bar2.backgroundColor = "#6A5ACD";
 
         //Changes the Style back to original
-        bar1.backgroundColor = "#FF7F50";
+        bar1.backgroundColor = "#FFFF00";
         bar2.backgroundColor = "#FF7F50";
       } else {
         await sleep(animationSpeed);
